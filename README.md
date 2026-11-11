@@ -1,5 +1,21 @@
 # Creating-a-Large-Language-Model-from-Scratch
 
+## Architecture and maintenance
+
+[Technical architecture, source boundaries, scalability decisions and verification](docs/ARCHITECTURE_MAINTENANCE.md) documents the current implementation and its limits. Maintenance dated 11 November 2026 is separate from the original study or project work.
+
+### Reproducible CPU smoke check
+
+```bash
+python -m venv .venv
+. .venv/bin/activate
+python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+python scripts/notebook_smoke.py
+```
+
+Run notebooks from the repository root. The default `data/sample.txt` is an original synthetic fixture; set `LLM_CORPUS=/absolute/path/to/your/licensed.txt` to use your own corpus. Full training retains the notebook iteration settings and is separate from the tiny CPU smoke check.
+
+
 
 # GPT Architecture Overview
 
